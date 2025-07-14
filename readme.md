@@ -14,16 +14,17 @@ A simple and clean To-Do List app to manage your tasks efficiently.
 
 ## Technologies
 
-- HTML5  
-- CSS3 / Tailwind CSS  
-- JavaScript  
-- Font Awesome  
-- LocalStorage  
+- HTML5
+- CSS3 / Tailwind CSS
+- JavaScript
+- Font Awesome
+- LocalStorage
 
 ## How to Use
 
-### Online
-Visit: [https://your-demo-link.com](https://your-demo-link.com)
+### Live
+
+Visit: (https://to-do-list-js-tailwind-lokendra.vercel.app/)
 
 ### Local Installation
 
@@ -32,3 +33,4 @@ git clone https://github.com/your-username/todo-list-app.git
 cd todo-list-app
 open index.html  # macOS
 start index.html # Windows
+```
