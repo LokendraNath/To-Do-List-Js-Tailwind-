@@ -1,1 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Almendra:wght@700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Poppins&display=swap');
 @import "tailwindcss";
+
+@theme {
+  --font-josefin: "Josefin Sans", "sans-serif"; 
+}
+@theme {
+  --font-Poppins: "Poppins", "sans-serif"; 
+}
+@theme {
+  --font-almendra: "Almendra", "sans-serif"; 
+}

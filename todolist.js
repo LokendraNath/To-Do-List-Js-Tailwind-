@@ -43,7 +43,7 @@ const renderTaskList = () => {
                 class="fa-solid fa-check self-center text-gray-600 rightIcn"
               ></i>
             </div>
-            <p class="taskName text-2xl font-semibold text-gray-600">
+            <p class="taskName text-xl font-semibold text-gray-600">
               ${item.name}
             </p>
           </div>
@@ -76,7 +76,7 @@ const addToList = () => {
     console.log("Input name too long!");
     return;
   } else {
-    allTasks.push({
+    allTasks.unshift({
       id: Date.now(),
       name: inputValue,
       complete: false,
