@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/output.css" />
+    <title>To Do List</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+  </head>
+  <body class="bg-blue-700 flex items-center justify-center min-h-screen">
+    <div class="container bg-transparent max-w-[400px] w-full rounded-3xl">
+      <h1 class="text-center text-4xl font-bold mb-8 text-white">
+        - To do List -
+      </h1>
+      <div
+        class="bg-white h-18 rounded-xl mb-5 flex items-center justify-between px-8 text-2xl"
+      >
+        <input
+          type="text"
+          id="input"
+          placeholder="Add New Tasks ..."
+          aria-label="task name Enter"
+          class="w-60 py-[4px] border-0 border-b-2 border-gray-500 focus:outline-none text-gray-700 font-semibold text-xl placeholder:text-xl"
+        />
+        <button
+        id="addBtn"
+          class="bg-blue-700 h-10 w-20 text-white font-bold rounded-2xl text-lg active:bg-blue-800 active:scale-[0.97] active:shadow-md transition-all duration-100"
+          aria-label="task add button"
+        >
+          Add
+        </button>
+      </div>
+      <ul id="taskLists"
+        class="bg-white h-[400px] overflow-y-auto rounded-2xl px-8 py-6"
+      >
+        
+      </ul>
+    </div>
+    <script src="todolist.js"></script>
+  </body>
+</html>
