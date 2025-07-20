@@ -1,7 +1,6 @@
 function generateId() {
-  return Date.now() + Math.floor(Math.random() * 10);
+  return crypto.randomUUID();
 }
-console.log(generateId());
 
 let allTasks = JSON.parse(localStorage.getItem("tasks")) || [
   {
@@ -69,21 +68,25 @@ const renderTaskList = () => {
     taskList.append(li);
   });
 };
+
 const addToList = () => {
   let inputValue = userInput.value.trim();
 
   if (inputValue.length > 20) {
-    console.log("Input name too long!");
+    console.log("Input length Must be Less Than 20 Word");
     return;
-  } else {
-    allTasks.unshift({
-      id: Date.now(),
-      name: inputValue,
-      complete: false,
-    });
-    updateLocalStorage();
-    renderTaskList();
   }
+  if (!inputValue) {
+    console.log("Input Cannot Be Empty");
+    return;
+  }
+  allTasks.unshift({
+    id: Date.now(),
+    name: inputValue,
+    complete: false,
+  });
+  updateLocalStorage();
+  renderTaskList();
 
   userInput.value = "";
 };
@@ -97,7 +100,9 @@ userInput.addEventListener("keydown", (e) => {
 });
 
 // Delete Logic
-taskList.addEventListener("click", (e) => {
+
+taskList.addEventListener("click", handleTaskAction);
+function handleTaskAction(e) {
   const li = e.target.closest("li");
 
   if (!li) return;
@@ -132,6 +137,6 @@ taskList.addEventListener("click", (e) => {
       }
     }
   }
-});
+}
 
 renderTaskList();
